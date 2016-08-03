@@ -1,7 +1,8 @@
-@import 
+@import
   'sass/_susy.scss',
   'sections/reset.scss',
   'sections/mail';
+
 $susy: (
   columns: 12,
   gutters: 1/2,
@@ -12,14 +13,71 @@ $susy: (
 $container: 1170px;
 $container-float: 100%;
 
+$sprite: 'images/sprite.png';
+
+body {
+  font-family: 'Oxygen', sans-serif;
+  &.design {
+    background: url('images/pattern.jpg') repeat 39px -9px;
+  }
+}
+
 .container-float{
   @include container($container-float);
 }
 
 .container{
   @include container($container);
-}  
-
-.test{
-  @include span(6);	
 }
+
+.diamond {
+  background: url($sprite) no-repeat -112px -89px;
+  padding: 6px 6px;
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.social {
+  .facebook {
+    background: url($sprite) no-repeat 0px -43px;
+
+    &:hover {
+          background: url($sprite) no-repeat 0px -82px;
+    }
+  }
+
+  .instagram {
+    background: url($sprite) no-repeat -55px -43px;
+
+    &:hover {
+          background: url($sprite) no-repeat -5px -264px;
+    }
+  }
+
+  .vkontakte {
+    background: url($sprite) no-repeat -103px -43px;
+
+    &:hover {
+          background: url($sprite) no-repeat -42px -264px;
+    }
+  }
+
+  .social_icon {
+    height: 33px;
+    width: 33px;
+    float: right;
+    margin: 0 5px 50px 5px;
+    cursor: pointer;
+  }
+}
+
+
+@import 'sections/navigation',
+  'sections/first_block',
+  'sections/main_block',
+  'sections/slider',
+  'sections/footer',
+  'sections/design',
+  'sections/catalog',
+  'sections/pageKitchen'

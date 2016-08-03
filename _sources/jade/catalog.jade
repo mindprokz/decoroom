@@ -1,0 +1,95 @@
+doctype html
+html(lang!="Ru-ru")
+  head
+    include sections/header.jade
+  body
+    include sections/navigation.jade
+    .breadcump.mobile_hidden
+      a.back(href="/")
+        .back_arrow
+        h3="Вернуться на главную"
+      .see_all
+        .all_pos
+        h3(onclick="allObj.clearFilter(true)")="Посмотреть все"
+    .content_kitchen
+      .filters.hidden
+        .mobile_closer
+        .wrap_filters
+          .filters_block
+            h3="Форма"
+            form
+              label(onclick="filtersStore.shape = 'angle'")
+                input(type="radio" name="form" value="Угловая")
+                h4="Угловая"
+              label(onclick="filtersStore.shape = 'linear'")
+                input(type="radio" name="form" value="Прямая")
+                h4="Прямая"
+          .filters_block
+            h3="Размер"
+            form
+              label(onclick="filtersStore.size = 'big'")
+                input(type="radio" name="size" value="Большая")
+                h4="Большая"
+              label(onclick="filtersStore.size = 'middle'")
+                input(type="radio" name="size" value="Средняя")
+                h4="Средняя"
+              label(onclick="filtersStore.size = 'little'")
+                input(type="radio" name="size" value="Малогабаритная")
+                h4="Малогабаритная"
+          .filters_block
+            h3="Цвет"
+            form
+              label(onclick="filtersStore.color = 'white'")
+                input(type="radio" name="color" value="Белый")
+                h4="Белый"
+              label(onclick="filtersStore.color = 'black'")
+                input(type="radio" name="color" value="Черный")
+                h4="Черный"
+              label(onclick="filtersStore.color = 'rainbow'")
+                input(type="radio" name="color" value="Цветная")
+                h4="Цветная"
+          .filters_block
+            h3="Стиль"
+            form
+              label(onclick="filtersStore.style = 'traditional'")
+                input(type="radio" name="color" value="Традиционный")
+                h4="Традиционный"
+              label(onclick="filtersStore.style = 'modern'")
+                input(type="radio" name="color" value="Современный")
+                h4="Современный"
+          .filters_block
+            h3="Локация"
+            form
+              label(onclick="filtersStore.location = 'home'")
+                input(type="radio" name="color" value="Для дома")
+                h4="Для дома"
+              label(onclick="filtersStore.location = 'bower'")
+                input(type="radio" name="color" value="Для дачи")
+                h4="Для дачи"
+          .filters_block
+            h3="Материал"
+            form
+              label(onclick="filtersStore.material = 'wood'")
+                input(type="radio" name="color" value="Дерево")
+                h4="Дерево"
+              label(onclick="filtersStore.material = 'glass'")
+                input(type="radio" name="color" value="Стекло")
+                h4="Стекло"
+              label(onclick="filtersStore.material = 'plastic'")
+                input(type="radio" name="color" value="Пластик")
+                h4="Пластик"
+              label(onclick="filtersStore.material = 'metal'")
+                input(type="radio" name="color" value="Металл")
+                h4="Металл"
+      .position_kitchen
+        .wrap_kitchen  
+          include sections/catalog_elems.jade
+    .breadcump.mobile_breadcump
+      a.back(href="/")
+        .back_arrow
+        h3="Вернуться на главную"
+      .open_filters
+        .icon
+        span="Фильтр"  
+    script!="var application = { catalog: true }"
+    include sections/footer.jade  

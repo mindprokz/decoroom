@@ -1,0 +1,181 @@
+.menu_desktop {
+	background: url('images/pattern.jpg') repeat -12px -22px;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 4px solid #a4a4a4;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 10;
+	transition: height .3s ease;
+
+	@media screen and (min-width: 1px) {
+		display: none;
+	}
+
+	@media screen and (min-width: 970px) {
+		display: flex;
+	}
+
+	&.menu_fixed_on_top {
+		height: 147px;
+	}
+
+	&.float_menu {
+		height: 80px;
+
+		.logo {
+			background: url($sprite) no-repeat -166px -133px;
+			height: 38px;
+			width: 70px;
+			margin-bottom: 0;
+
+		}
+
+		.contacts {
+			flex-direction: row-reverse;
+			align-items: center;
+
+			.numbers {
+				margin-right: 25px;
+			}
+
+			.social_icon {
+				margin-top: 51px;
+			}
+
+			.mail {
+				display: none;
+			}
+		}
+	}
+
+	.logo {
+		background: url($sprite) no-repeat 0px -212px;
+		height: 48px;
+		width: 241px;
+		margin-bottom: 15px;
+	}
+
+	nav {
+		a {
+			margin: 0 14px;
+			color: #a4a4a4;
+			text-decoration: none;
+		}
+	}
+
+
+	.contacts {
+		display: flex;
+		align-content: space-between;
+		flex-direction: column;
+
+		.numbers {
+			color: #fffefe;
+			font-size: 18px;
+
+			b {
+				color: #b13960;
+			}
+		}
+	}
+}
+
+.menu_mobile {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+
+	@media screen and (min-width: 1px) {
+		display: block;
+	}
+
+	@media screen and (min-width: 970px) {
+		display: none;
+	}
+
+	.menu_little {
+		background: url('images/pattern.jpg') repeat -12px -22px;
+		background-size: 60px 60px;
+		height: 110px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 10px;
+		padding-right: 10px;
+
+		.burger {
+			background: url($sprite) no-repeat -190px -10px;
+			width: 27px;
+			height: 22px;
+			cursor: pointer;
+		}
+
+		.logo {
+			background: url($sprite) no-repeat -166px -133px;
+			height: 38px;
+			width: 70px;
+		}
+
+		.number {
+			color: #fffefe;
+			font-size: 12px;
+
+			b {
+				color: #b13960;
+			}
+		}
+	}
+
+	.menu_big {
+		height: 200px;
+		background: url('images/pattern.jpg') repeat -12px -22px;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		transform: translateY(0);
+		transition: transform .3s ease;
+
+		&.close {
+			transform: translateY(-100%);
+		}
+
+		.closer {
+			background: url($sprite) no-repeat -222px -9px;
+			height: 23px;
+			width: 23px;
+			float: right;
+			margin-top: 35px;
+			margin-right: 20px;
+			cursor: pointer;
+		}
+
+		nav {
+			padding-top: 45px;
+			display: flex;
+			justify-content: space-between;
+			padding-left: 20px;
+			padding-right: 20px;
+			font-size: 12px;
+
+			a {
+				color: #a4a4a4;
+				text-decoration: none;
+			}
+		}
+
+		.contacts .social {
+			display: flex;
+			justify-content: center;
+			padding-top: 45px;
+		}
+	}
+}

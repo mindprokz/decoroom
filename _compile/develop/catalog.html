@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="Ru-ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="Keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=480px">
+    <link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/favicon.png">
+    <link rel="stylesheet" href="/libs/flexslider/flexslider.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/libs/oxygen_font/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  </head>
+  <body>
+    <section class="menu_desktop menu_fixed_on_top">
+      <div class="logo"></div>
+      <nav><a href="/catalog.html">Каталог</a><a href="#">Наше производство</a><a href="#">Отзывы</a><a href="#">Контакты</a><a href="#">Блог</a></nav>
+      <div class="contacts">
+        <div class="social">
+          <div class="facebook social_icon"></div>
+          <div class="instagram social_icon"></div>
+          <div class="vkontakte social_icon"></div>
+        </div>
+        <div class="numbers">
+          <div class="tel"><b>тел.: </b> +7 (123) 456 - 78 - 91</div>
+          <div class="mail"><b>почта: </b>  hi@decoroom24.ru</div>
+        </div>
+      </div>
+    </section>
+    <section class="menu_mobile">
+      <div class="menu_little">
+        <div class="burger"></div>
+        <div class="logo"></div>
+        <div class="contacts">
+          <div class="number"><b>тел.: </b> +7 (123) 456 - 78 - 91</div>
+        </div>
+      </div>
+      <div class="menu_big close">
+        <div class="wrap_closer">
+          <div class="closer"></div>
+        </div>
+        <nav><a href="/catalog.html">Каталог</a><a href="#">Наше производство</a><a href="#">Отзывы</a><a href="#">Контакты</a><a href="#">Блог</a></nav>
+        <div class="contacts">
+          <div class="social">
+            <div class="facebook social_icon"></div>
+            <div class="instagram social_icon"></div>
+            <div class="vkontakte social_icon"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="breadcump mobile_hidden"><a href="/" class="back">
+        <div class="back_arrow"></div>
+        <h3>Вернуться на главную</h3></a>
+      <div class="see_all">
+        <div class="all_pos"></div>
+        <h3 onclick="allObj.clearFilter(true)">Посмотреть все</h3>
+      </div>
+    </div>
+    <div class="content_kitchen">
+      <div class="filters hidden">
+        <div class="mobile_closer"></div>
+        <div class="wrap_filters">
+          <div class="filters_block">
+            <h3>Форма</h3>
+            <form>
+              <label onclick="filtersStore.shape = 'angle'">
+                <input type="radio" name="form" value="Угловая">
+                <h4>Угловая</h4>
+              </label>
+              <label onclick="filtersStore.shape = 'linear'">
+                <input type="radio" name="form" value="Прямая">
+                <h4>Прямая</h4>
+              </label>
+            </form>
+          </div>
+          <div class="filters_block">
+            <h3>Размер</h3>
+            <form>
+              <label onclick="filtersStore.size = 'big'">
+                <input type="radio" name="size" value="Большая">
+                <h4>Большая</h4>
+              </label>
+              <label onclick="filtersStore.size = 'middle'">
+                <input type="radio" name="size" value="Средняя">
+                <h4>Средняя</h4>
+              </label>
+              <label onclick="filtersStore.size = 'little'">
+                <input type="radio" name="size" value="Малогабаритная">
+                <h4>Малогабаритная</h4>
+              </label>
+            </form>
+          </div>
+          <div class="filters_block">
+            <h3>Цвет</h3>
+            <form>
+              <label onclick="filtersStore.color = 'white'">
+                <input type="radio" name="color" value="Белый">
+                <h4>Белый</h4>
+              </label>
+              <label onclick="filtersStore.color = 'black'">
+                <input type="radio" name="color" value="Черный">
+                <h4>Черный</h4>
+              </label>
+              <label onclick="filtersStore.color = 'rainbow'">
+                <input type="radio" name="color" value="Цветная">
+                <h4>Цветная</h4>
+              </label>
+            </form>
+          </div>
+          <div class="filters_block">
+            <h3>Стиль</h3>
+            <form>
+              <label onclick="filtersStore.style = 'traditional'">
+                <input type="radio" name="color" value="Традиционный">
+                <h4>Традиционный</h4>
+              </label>
+              <label onclick="filtersStore.style = 'modern'">
+                <input type="radio" name="color" value="Современный">
+                <h4>Современный</h4>
+              </label>
+            </form>
+          </div>
+          <div class="filters_block">
+            <h3>Локация</h3>
+            <form>
+              <label onclick="filtersStore.location = 'home'">
+                <input type="radio" name="color" value="Для дома">
+                <h4>Для дома</h4>
+              </label>
+              <label onclick="filtersStore.location = 'bower'">
+                <input type="radio" name="color" value="Для дачи">
+                <h4>Для дачи</h4>
+              </label>
+            </form>
+          </div>
+          <div class="filters_block">
+            <h3>Материал</h3>
+            <form>
+              <label onclick="filtersStore.material = 'wood'">
+                <input type="radio" name="color" value="Дерево">
+                <h4>Дерево</h4>
+              </label>
+              <label onclick="filtersStore.material = 'glass'">
+                <input type="radio" name="color" value="Стекло">
+                <h4>Стекло</h4>
+              </label>
+              <label onclick="filtersStore.material = 'plastic'">
+                <input type="radio" name="color" value="Пластик">
+                <h4>Пластик</h4>
+              </label>
+              <label onclick="filtersStore.material = 'metal'">
+                <input type="radio" name="color" value="Металл">
+                <h4>Металл</h4>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="position_kitchen">
+        <div class="wrap_kitchen"> 
+          <!-- Блок записи--><a href="/kitchens/exampleKitchen.html" data-shape="angle" data-size="middle" data-color="rainbow" data-style="traditional" data-location="home" data-material="wood" class="catalog_elem">
+            <div class="wrap_img"><img src="images/catalog_elem.jpg"></div>
+            <div class="model">
+              <div class="icon"></div>
+              <h4>Модель «Классика массив»</h4>
+            </div>
+            <div class="array">
+              <div class="icon"></div>
+              <h4>Массив дуба/ясеня</h4>
+            </div>
+            <div class="price">
+              <div class="icon"></div>
+              <h4>Стоимость от 80 000</h4>
+            </div></a>
+          <!-- Конец записи-->
+          <div data-shape="linear" data-size="middle" data-color="rainbow" data-style="traditional" data-location="bower" data-material="wood" class="catalog_elem">
+            <div class="wrap_img"><img src="images/catalog_elem.jpg"></div>
+            <div class="model">
+              <div class="icon"></div>
+              <h4>Модель  «Классика массив»</h4>
+            </div>
+            <div class="array">
+              <div class="icon"></div>
+              <h4>Массив дуба/ясеня</h4>
+            </div>
+            <div class="price">
+              <div class="icon"></div>
+              <h4>Стоимость от 80 000</h4>
+            </div>
+          </div>
+          <div data-shape="angle" data-size="little" data-color="rainbow" data-style="modern" data-location="home" data-material="plastic" class="catalog_elem">
+            <div class="wrap_img"><img src="images/catalog_elem.jpg"></div>
+            <div class="model">
+              <div class="icon"></div>
+              <h4>Модель  «Классика массив»</h4>
+            </div>
+            <div class="array">
+              <div class="icon"></div>
+              <h4>Массив дуба/ясеня</h4>
+            </div>
+            <div class="price">
+              <div class="icon"></div>
+              <h4>Стоимость от 80 000</h4>
+            </div>
+          </div>
+          <div data-shape="linear" data-size="big" data-color="white" data-style="traditional" data-location="bower" data-material="glass" class="catalog_elem">
+            <div class="wrap_img"><img src="images/catalog_elem.jpg"></div>
+            <div class="model">
+              <div class="icon"></div>
+              <h4>Модель  «Классика массив»</h4>
+            </div>
+            <div class="array">
+              <div class="icon"></div>
+              <h4>Массив дуба/ясеня</h4>
+            </div>
+            <div class="price">
+              <div class="icon"></div>
+              <h4>Стоимость от 80 000</h4>
+            </div>
+          </div>
+          <div data-shape="angle" data-size="big" data-color="black" data-style="modern" data-location="home" data-material="wood" class="catalog_elem">
+            <div class="wrap_img"><img src="images/catalog_elem.jpg"></div>
+            <div class="model">
+              <div class="icon"></div>
+              <h4>Модель  «Классика массив»</h4>
+            </div>
+            <div class="array">
+              <div class="icon"></div>
+              <h4>Массив дуба/ясеня</h4>
+            </div>
+            <div class="price">
+              <div class="icon"></div>
+              <h4>Стоимость от 80 000</h4>
+            </div>
+          </div>
+          <div data-shape="linear" data-size="middle" data-color="rainbow" data-style="traditional" data-location="home" data-material="metal" class="catalog_elem">
+            <div class="wrap_img"><img src="images/catalog_elem.jpg"></div>
+            <div class="model">
+              <div class="icon"></div>
+              <h4>Модель  «Классика массив»</h4>
+            </div>
+            <div class="array">
+              <div class="icon"></div>
+              <h4>Массив дуба/ясеня</h4>
+            </div>
+            <div class="price">
+              <div class="icon"></div>
+              <h4>Стоимость от 80 000</h4>
+            </div>
+          </div>
+          <div data-shape="angle" data-size="middle" data-color="rainbow" data-style="modern" data-location="bower" data-material="wood" class="catalog_elem">
+            <div class="wrap_img"><img src="images/catalog_elem.jpg"></div>
+            <div class="model">
+              <div class="icon"></div>
+              <h4>Модель «Классика массив»</h4>
+            </div>
+            <div class="array">
+              <div class="icon"></div>
+              <h4>Массив дуба/ясеня</h4>
+            </div>
+            <div class="price">
+              <div class="icon"></div>
+              <h4>Стоимость от 80 000</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="breadcump mobile_breadcump"><a href="/" class="back">
+        <div class="back_arrow"></div>
+        <h3>Вернуться на главную</h3></a>
+      <div class="open_filters">
+        <div class="icon"></div><span>Фильтр</span>
+      </div>
+    </div>
+    <script>var application = { catalog: true }</script>
+    <footer class="footer">
+      <header>
+        <div class="social">
+          <div class="facebook social_icon"></div>
+          <div class="instagram social_icon"></div>
+          <div class="vkontakte social_icon"></div>
+        </div>
+      </header>
+      <footer>
+        <div class="design"><a href="/design.html">
+            <h3>Дизайнерам</h3></a>
+          <div class="tag">#сделановdecoroom</div>
+        </div>
+        <div class="contact">
+          <div class="tel"><b>тел.: </b> +7 (123) 456 - 78 - 91</div>
+          <div class="mail"><b>почта: </b>  hi@decoroom24.ru</div>
+          <div class="adress"><b>адрес:</b> г. Набережные Челны, Фабричный проезд дом 17</div>
+        </div>
+      </footer>
+    </footer>
+    <script src="/libs/jquery/dist/jquery.min.js"></script>
+    <script src="/libs/flexslider/jquery.flexslider-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="/common.js"></script>
+  </body>
+</html>

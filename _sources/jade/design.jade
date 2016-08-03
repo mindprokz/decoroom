@@ -1,0 +1,21 @@
+doctype html
+html(lang!="Ru-ru")
+  head
+    include sections/header.jade
+  body.design
+    include sections/navigation.jade
+    .breadcump
+      a.back(href="/")
+        .back_arrow
+        h3="Вернуться на главную"
+      a.next(href="/catalog.html")
+        .next_arrow
+        h3="Вернуться в каталог"
+    .wrapForDesign
+      .forDesigners
+        .text
+          h3!="Дизайнерам <b class='diamond'></b> архитекторам <b class='diamond'></b> проектировщикам"
+          p!="Мы понимаем насколько важно иметь надежного партнера, который сделает все в срок, качественно и предложит выгодные условия сотрудничества. С нами вы получите по умолчанию все вышеперечисленное, а еще бонусы, 3D-модели и возможность разместить свой проект в нашем <a href='/blog'>блоге</a>."
+          .button="Узнать подробнее"
+    script!="var application = { design: true }"
+    include sections/footer.jade  

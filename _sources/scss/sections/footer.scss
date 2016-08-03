@@ -1,0 +1,74 @@
+.footer {
+	background: url('images/pattern.jpg') repeat -12px -22px;
+
+	.social {
+		height: 80px;
+		padding-top: 25px;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: center;
+	}
+
+	.social_icon {
+		float: left;
+		margin: 0 5px;
+	}
+
+	footer {
+		display: flex;
+		justify-content: space-between;
+		padding-left: 10px;
+		padding-right: 10px;
+
+		@media screen and (min-width: 1px) {
+			flex-direction: column;
+		}
+
+		@media screen and (min-width: 970px) {
+			flex-direction: row;
+		}
+
+		.design {
+			color: #a4a4a4;
+
+			@media screen and (min-width: 1px) {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			@media screen and (min-width: 970px) {
+				display: block;
+			}
+
+			h3 {
+				border-bottom: 2px solid #c3416b;
+				font-size: 20px;
+				padding-bottom: 3px;
+				float: left;
+				margin-bottom: 23px;
+				color: #a4a4a4;
+			}
+
+			.tag {
+				padding-bottom: 20px;
+			}
+		}
+
+		.contact {
+			font-size: 20px;
+			color: #FFFFFF;
+
+			b {
+				color: #b13960;
+			}
+
+			div {
+				@media screen and (min-width: 1px) and (max-width: 970px) {
+					text-align: center;
+					margin-top: 10px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}

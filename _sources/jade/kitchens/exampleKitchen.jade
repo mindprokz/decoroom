@@ -1,0 +1,75 @@
+doctype html
+html(lang!="Ru-ru")
+  head
+    include ../sections/header.jade 
+  body
+    include ../sections/navigation.jade
+    .breadcump
+      a.back(href="/")
+        .back_arrow
+        h3="Вернуться на главную"
+      a.next(href="/catalog.html")
+        .next_arrow
+        h3="Вернуться в каталог"
+    .kitchen
+      .info
+        img(src="../images/kitchen_room.jpg").wrap_img
+        .model
+          .icon
+          h4="Модель «Классика массив»"
+        .array
+          .icon
+          h4="Массив дуба/ясеня"
+        .price
+          .icon
+          h4="Стоимость от 80 000"
+        h4.steps="4 шага до новой кухни:"
+        .icons
+          .icon__step
+            .img.rulet
+            h5="Снятие замеров"
+            .arrow
+          .icon__step
+            .img.line
+            h5="Проектирование"
+            .arrow
+          .icon__step
+            .img.cour
+            h5="Оформление заказа"
+            .arrow
+          .icon__step
+            .img.drel
+            h5="Установка"
+      .form    
+        .wrap
+          h3="Сделаем расчёт за 5 минут"
+          h4="Или сделаем скидку на кухню 10 000 рублей."
+          form(id="application")
+            label
+              h5="Имя:"
+              input(type="text" name="name" required)
+            label
+              h5="Телефон:"
+              input(type="text" name="telephone" required)
+            button.button_catalog="Хочу расчёт"
+    #mail.not_visible_mail        
+    script!="var application = { kitchen: true }"
+    footer.footer
+      header
+        .social
+          .facebook.social_icon
+          .instagram.social_icon
+          .vkontakte.social_icon
+      footer
+        .design
+          a(href="/design.html")
+            h3="Дизайнерам"
+          .tag="#сделановdecoroom"
+        .contact
+          .tel!="<b>тел.: </b> +7 (123) 456 - 78 - 91"
+          .mail!="<b>почта: </b>  hi@decoroom24.ru"
+          .adress!="<b>адрес:</b> г. Набережные Челны, Фабричный проезд дом 17"
+    script(src="/libs/jquery/dist/jquery.min.js")
+    script(src="/libs/flexslider/jquery.flexslider-min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js")
+    script(src="/common.js")

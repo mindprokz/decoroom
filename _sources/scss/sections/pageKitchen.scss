@@ -1,0 +1,234 @@
+.kitchen {
+  padding-bottom: 55px;
+  display: flex;
+
+  @media screen and (min-width: 1px) {
+    flex-direction: column;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    flex-direction: row;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .info {
+    width: 50%;
+    box-sizing: border-box;
+
+    @media screen and (min-width: 1px) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 750px) {
+      width: 50%;
+    }
+
+    .wrap_img {
+      width: 100%;
+      height: auto;
+    }
+
+    .icon {
+      background: url($sprite) no-repeat;
+      width: 13px;
+      height: 13px;
+      float: left;
+      margin-right: 15px;
+    }
+
+    h4 {
+      font-size: 16px;
+    }
+
+    .model {
+      padding-top: 15px;
+      padding-bottom: 5px;
+      padding-left: 15px;
+
+      .icon {
+        background-position: -160px -112px;
+      }
+
+    }
+
+    .array {
+      padding-bottom: 5px;
+      padding-left: 15px;
+
+      .icon {
+        background-position: -178px -112px;
+      }
+
+    }
+
+    .price {
+      padding-bottom: 5px;
+      padding-left: 15px;
+
+      .icon {
+        background-position: -198px -112px;
+      }
+
+    }
+
+    .steps {
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      .icon__step {
+        width: 33.333%;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .img {
+          background: url($sprite) no-repeat;
+          padding-bottom: 22px;
+
+          &.rulet {
+            background-position: -69px -165px;
+            width: 51px;
+            height: 30px;
+          }
+
+          &.line {
+            background-position: -16px -161px;
+            width: 51px;
+            height: 30px;
+          }
+
+          &.cour {
+            background-position: -61px -115px;
+            width: 51px;
+            height: 30px;
+          }
+
+          &.drel {
+            background-position: -13px -110px;
+            width: 51px;
+            height: 30px;
+          }
+        }
+
+        h5 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .form {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    @media screen and (min-width: 1px) {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 30px;
+      padding-left: 0;
+    }
+
+    @media screen and (min-width: 750px) {
+      width: 50%;
+      padding-left: 20px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+      width: 100%;
+      border: 1px solid #535353;
+      box-sizing: border-box;
+      text-align: center;
+
+      @media screen and (min-width: 1px) {
+        padding: 50px 0 30px 0;
+      }
+
+      @media screen and (min-width: 750px) {
+        padding: 0;
+      }
+
+      h3 {
+        color: #000000;
+        font-weight: 700;
+        padding-bottom: 10px;
+        font-size: 20px;
+      }
+
+      h4 {
+        color: #a4a4a4;
+        font-size: 20px;
+      }
+
+      label {
+        width: 250px;
+        border: 2px solid #8b8b8b;
+        display: block;
+        text-align: left;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+
+        h5 {
+          font-size: 14px;
+          padding-top: 7px;
+          padding-left: 7px;
+        }
+
+        input {
+          outline: 0;
+          border: 0;
+          padding-left: 15px;
+          margin-top: 5px;
+          font-size: 16px;
+
+        }
+      }
+
+      .button_catalog {
+  			width: 250px;
+  			display: flex;
+  			align-items: center;
+  			justify-content: center;
+  			height: 50px;
+  			margin: 23px auto 0px auto;
+  			background: #b13960;
+  			box-shadow: 0px 0px 20px 5px rgba(177, 57, 96, 1);
+  			color: #FFFFFF;
+  			text-decoration: none;
+  			font-size: 18px;
+        outline: 0;
+        border: 0;
+        cursor: pointer;
+  			transition: box-shadow, color .3s, .3s ease-in, ease;
+
+  			&:hover {
+  				box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 1);
+  				background: #000000;
+  			}
+  		}
+
+    }
+  }
+}
