@@ -58,11 +58,14 @@
 			font-size: 20px;
 			color: #FFFFFF;
 
+
 			b {
 				color: #b13960;
 			}
 
 			div {
+				padding-bottom: 4px;
+
 				@media screen and (min-width: 1px) and (max-width: 970px) {
 					text-align: center;
 					margin-top: 10px;

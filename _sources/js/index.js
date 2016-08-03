@@ -1,6 +1,7 @@
 import SendFunc from './sendForm.js';
 import FloatMenu from './floatMenu.js';
 import { filter, clearFilter } from './filters.js';
+
 //   $(document).ready(function () {
 //     'use strict';
 // //Аякс отправка форм
@@ -40,7 +41,7 @@ new FloatMenu().init({
 // Can also be used with $(document).ready()
 $(window).load(function() {
   $('.flexslider').flexslider({
-    animation: "slide",
+    animation: "none",
 	  prevText: " ",           //Текст для пункта "предыдущий" directionNav
 	  nextText: " ",
   });
@@ -59,6 +60,8 @@ document.querySelector('.menu_big  .closer').addEventListener('click', () => {
 
 // Обработка нажатия на фильтры
 if (application.catalog) {
+  // Второе нажатие на фильтры убирает их активность
+
   // Открытие фильтров на моб. версии
   document.querySelector('.mobile_closer').addEventListener('click', () => {
     document.querySelector('.filters').classList.add('hidden');
@@ -133,16 +136,6 @@ if (application.catalog) {
   };
 }
 
-function callAllFilters(self) {
-    allObj.clearFilter();
-    allObj.filter(self.shape, 'shape');
-    allObj.filter(self.size, 'size');
-    allObj.filter(self.color, 'color');
-    allObj.filter(self.style, 'style');
-    allObj.filter(self.location, 'location');
-    allObj.filter(self.material, 'material');
-}
-
 new WOW().init();
 
 if (application.kitchen) {
@@ -153,4 +146,28 @@ if (application.kitchen) {
   };
 
   new SendFunc('application', data, 'mail');
+}
+
+
+function callAllFilters(self) {
+    allObj.clearFilter();
+    allObj.filter(self.shape, 'shape');
+    allObj.filter(self.size, 'size');
+    allObj.filter(self.color, 'color');
+    allObj.filter(self.style, 'style');
+    allObj.filter(self.location, 'location');
+    allObj.filter(self.material, 'material');
+}
+
+
+window.labelClick = function(self, nameFilter, valueFilter) {
+  console.log(self.dataset.checked == 'nope');
+  if (self.dataset.checked == 'nope') {
+    self.dataset.checked = 'click';
+    filtersStore[nameFilter] = valueFilter;
+  } else {
+    self.dataset.checked = 'nope';
+    filtersStore[nameFilter] = 'all';
+  }
+  return false;
 }

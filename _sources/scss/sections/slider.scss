@@ -7,7 +7,7 @@
 	height: 585px;
 	margin: 0;
 	overflow: hidden;
-	
+
 	&:before {
 		content: ' ';
 		position: absolute;
@@ -41,11 +41,9 @@
   top: 50%;
   z-index: 10;
   overflow: hidden;
-  opacity: 0;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.8);
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease-in-out;
   background: url('images/sprite.png') no-repeat -142px -90px;
 
   &:hover {
@@ -65,6 +63,9 @@
 	transform: scaleX(-1);
 }
 
+.flex-direction-nav .flex-prev {
+	left: 0;
+}
 
 .flex-control-paging li a {
   width: 12px;
